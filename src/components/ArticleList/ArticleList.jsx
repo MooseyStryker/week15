@@ -6,6 +6,7 @@ import { loadArticles } from '../../store/articleReducer';
 const ArticleList = () => {
   const dispatch = useDispatch();
   const articles = useSelector(state=>state.articleState.entries);
+  console.log("🚀 ~ ArticleList ~ articles:", articles)
 
   useEffect(() => {
     dispatch(loadArticles());
